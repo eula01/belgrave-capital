@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useMemo, useState } from "react";
+import ClientLogin from "@/components/ClientLogin";
 import Disclaimer from "@/components/Disclaimer";
 import memosData from "@/data/memos.json";
 
@@ -148,6 +149,9 @@ export default function Website() {
       >
         <div id="disclaimermt">disclaimer</div>
       </a>
+      <div id="clientloginmt">
+        <ClientLogin />
+      </div>
       <a href="#" onClick={(e) => { e.preventDefault(); selectMemo("about"); }}>
         <div id="imprintmt">about</div>
       </a>
@@ -156,7 +160,10 @@ export default function Website() {
         {isMobile && (
           <>
             <div className="mobile-bar" onClick={toggleList}>
-              belgrave capital ltd
+              <span>belgrave capital ltd</span>
+              <span className="mobile-bar-login" onClick={(e) => e.stopPropagation()}>
+                <ClientLogin className="client-login-link mobile-client-login" />
+              </span>
             </div>
             <div className="mobile-icon-wrap" onClick={toggleList}>
               <div className="mobile-icon" />

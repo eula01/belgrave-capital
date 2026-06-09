@@ -9,7 +9,11 @@ npm install
 npm run dev
 ```
 
+The site is public. Use the top-right **client login** link for authorised access.
+
 Default login: `client` / `belgrave2026` (override via `BELGRAVE_USERNAME` and `BELGRAVE_PASSWORD`).
+
+**Remember me:** checked = 30-day cookie; unchecked = session cookie (cleared when the browser closes).
 
 ## Deploy
 

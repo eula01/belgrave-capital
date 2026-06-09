@@ -9,6 +9,7 @@ function LoginForm() {
   const searchParams = useSearchParams();
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
+  const [rememberMe, setRememberMe] = useState(true);
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -22,7 +23,7 @@ function LoginForm() {
     const res = await fetch("/api/auth", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ username, password }),
+      body: JSON.stringify({ username, password, rememberMe }),
     });
 
     if (!res.ok) {
@@ -52,10 +53,21 @@ function LoginForm() {
           required
         />
       </label>
+      <label className="login-remember">
+        <input
+          type="checkbox"
+          checked={rememberMe}
+          onChange={(e) => setRememberMe(e.target.checked)}
+        />
+        remember me
+      </label>
       <button type="submit" disabled={loading}>
         {loading ? "..." : "enter"}
       </button>
       {error ? <p className="login-error">{error}</p> : null}
+      <p className="login-back">
+        <a href="/">← back to site</a>
+      </p>
     </form>
   );
 }

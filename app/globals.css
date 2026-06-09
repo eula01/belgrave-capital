@@ -132,11 +132,16 @@ a {
 }
 
 #imprintmt,
-#disclaimermt {
+#disclaimermt,
+#clientloginmt {
   z-index: 99;
   font-family: "Suisse", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 10px;
   position: fixed;
+}
+
+#imprintmt,
+#disclaimermt {
   bottom: 5px;
 }
 
@@ -146,6 +151,30 @@ a {
 
 #disclaimermt {
   left: 5px;
+}
+
+#clientloginmt {
+  top: 5px;
+  right: 5px;
+}
+
+.client-login-link {
+  color: black;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  background: none;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  font-family: inherit;
+  font-size: 10px;
+  text-transform: lowercase;
+  cursor: pointer;
+  padding: 0;
+}
+
+.client-login-link:hover {
+  border-bottom: 1px solid black;
 }
 
 .disclaimer {
@@ -219,6 +248,32 @@ a {
 .login-disclaimer {
   margin-top: 32px;
   max-width: 320px;
+}
+
+.login-remember {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 16px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.login-remember input {
+  margin: 0;
+}
+
+.login-back {
+  margin-top: 20px;
+  font-size: 15px;
+}
+
+.login-back a {
+  border-bottom: 1px solid transparent;
+}
+
+.login-back a:hover {
+  border-bottom: 1px solid black;
 }
 
 @media (min-width: 800px) {
@@ -295,8 +350,13 @@ a {
   }
 
   #imprintmt,
-  #disclaimermt {
+  #disclaimermt,
+  #clientloginmt {
     display: block;
+  }
+
+  .mobile-bar-login {
+    display: none;
   }
 }
 
@@ -364,13 +424,24 @@ a {
     top: 0;
     width: 100%;
     left: 0;
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     height: 29px;
     line-height: 29px;
     padding-left: 5px;
+    padding-right: 30px;
     box-sizing: border-box;
     z-index: 1;
     background: white;
+  }
+
+  #clientloginmt {
+    display: none;
+  }
+
+  .mobile-client-login {
+    font-size: 12px;
   }
 
   .mobile-icon-wrap {
