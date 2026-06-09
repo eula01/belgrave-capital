@@ -1,0 +1,438 @@
+@font-face {
+  font-family: "Suisse";
+  src: local("Helvetica Neue"), local("Helvetica"), local("Arial");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.hide_year {
+  visibility: hidden !important;
+}
+
+.image-wrap {
+  background: #f1f1f1;
+  box-shadow: inset 0px -1px 0px 0px white;
+}
+
+body {
+  margin: 0;
+  font-family: "Suisse", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: lowercase;
+}
+
+#about-list-item {
+  border-bottom-color: transparent !important;
+}
+
+.mobile-active-project {
+  cursor: pointer;
+}
+
+#about,
+.text-view {
+  line-height: 1.2;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+#list a {
+  border-bottom: 1px solid transparent;
+}
+
+#list::-webkit-scrollbar {
+  display: none;
+}
+
+#about,
+#list {
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+.category {
+  float: right;
+}
+
+.list-item a {
+  display: block;
+  width: 100%;
+  padding-top: 2px;
+}
+
+.list-item {
+  white-space: nowrap;
+}
+
+.project-content {
+  padding-top: 1px;
+}
+
+.mobile-active-project {
+  white-space: nowrap;
+}
+
+.media-view img,
+.media-view video {
+  width: 100%;
+}
+
+.image-wrap {
+  position: relative;
+}
+
+.image-wrap img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.image-view img {
+  opacity: 1;
+}
+
+.image-view,
+.video-view {
+  line-height: 0;
+}
+
+.about-indicator {
+  float: right;
+}
+
+.project-view:not(#about) .text-view {
+  margin-bottom: 0px;
+  margin-top: 2px;
+}
+
+.project-view:not(#about) .text-view p:last-child {
+  margin-bottom: 0;
+}
+
+.year.first-year {
+  visibility: visible;
+}
+
+.year {
+  visibility: hidden;
+}
+
+#list .list-item.active a {
+  border-bottom: 1px solid black;
+}
+
+#imprintmt {
+  z-index: 99;
+  font-family: "Suisse", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 10px;
+  position: fixed;
+  right: 5px;
+  bottom: 5px;
+}
+
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.login-form {
+  width: 100%;
+  max-width: 320px;
+}
+
+.login-form h1 {
+  font-size: 15px;
+  font-weight: normal;
+  margin: 0 0 20px;
+}
+
+.login-form label {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 15px;
+}
+
+.login-form input {
+  display: block;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid black;
+  padding: 4px 0;
+  font-family: inherit;
+  font-size: 15px;
+  text-transform: lowercase;
+  background: transparent;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.login-form button {
+  margin-top: 20px;
+  border: none;
+  background: none;
+  font-family: inherit;
+  font-size: 15px;
+  text-transform: lowercase;
+  cursor: pointer;
+  padding: 0;
+  border-bottom: 1px solid transparent;
+}
+
+.login-form button:hover {
+  border-bottom: 1px solid black;
+}
+
+.login-error {
+  color: black;
+  margin-top: 12px;
+  font-size: 15px;
+}
+
+@media (min-width: 800px) {
+  p {
+    margin-top: 0;
+    margin-bottom: 10px;
+    line-height: 17px;
+  }
+
+  body {
+    font-size: 15px;
+    line-height: 17px;
+  }
+
+  #about,
+  .text-view {
+    font-size: 15px;
+  }
+
+  #about-list-item {
+    margin-bottom: 19px;
+  }
+
+  .website-view {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+    width: 100%;
+    height: 100%;
+  }
+
+  #list {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    height: 100vh;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  #media {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    height: 100vh;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    font-size: 0;
+  }
+
+  .mobile-bar {
+    display: none;
+  }
+
+  .year {
+    display: inline-block;
+    text-align: left;
+    width: 78px;
+  }
+
+  #list a:hover {
+    border-bottom: 1px solid black;
+  }
+
+  .mobile-active-project {
+    display: none;
+  }
+
+  .text-view p {
+    line-height: 20px;
+    margin-bottom: 20px;
+  }
+
+  #imprintmt {
+    display: block;
+  }
+}
+
+@media (max-width: 799px) {
+  p {
+    line-height: 1.2;
+    margin-bottom: 1.2em;
+  }
+
+  #list .list-item.active a {
+    border-bottom: 1px solid black;
+  }
+
+  body {
+    font-size: 17px;
+    line-height: 1.2;
+    overflow-y: scroll;
+  }
+
+  #about,
+  .text-view {
+    font-size: 17px;
+  }
+
+  #about .text-view {
+    margin-bottom: 0px;
+    margin-top: 0;
+    padding-left: 0;
+  }
+
+  .text-view p:first-child {
+    margin-top: 0;
+  }
+
+  .text-view p:last-child {
+    margin-bottom: 0;
+  }
+
+  .text-view {
+    margin-bottom: 0px;
+    margin-top: 2px;
+    padding-left: 5px;
+  }
+
+  #about-list-item {
+    display: none;
+  }
+
+  .mobile-active-project {
+    position: fixed;
+    top: 31px;
+    z-index: 5;
+    padding: 5px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .mobile-active-project .year {
+    visibility: visible;
+  }
+
+  .mobile-bar {
+    cursor: pointer;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    left: 0;
+    display: block;
+    height: 29px;
+    line-height: 29px;
+    padding-left: 5px;
+    box-sizing: border-box;
+    z-index: 1;
+    background: white;
+  }
+
+  .mobile-icon-wrap {
+    position: fixed;
+    padding-top: 10px;
+    padding-right: 9px;
+    padding-left: 9px;
+    box-sizing: border-box;
+    top: 0;
+    right: 0;
+    height: 29px;
+    z-index: 3;
+    cursor: pointer;
+  }
+
+  #about {
+    padding-top: 38px;
+  }
+
+  .mobile-icon {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: 1px solid black;
+  }
+
+  body.mobile-show-project-list #list {
+    display: block;
+  }
+
+  body.mobile-show-project-list #media {
+    opacity: 0.8;
+  }
+
+  body.mobile-show-project-list .mobile-icon {
+    background-color: black;
+  }
+
+  body.mobile-show-project-list .mobile-active-project {
+    display: none;
+  }
+
+  body.mobile-show-project-list #about {
+    visibility: hidden;
+  }
+
+  #list {
+    position: fixed;
+    top: 29px;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    z-index: 2;
+    display: none;
+  }
+
+  .year {
+    display: inline-block;
+    text-align: left;
+    width: 83px;
+    vertical-align: top;
+  }
+
+  .category {
+    width: 105px;
+    text-align: right;
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  .title {
+    display: inline-block;
+    width: calc(100vw - 105px - 110px);
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    vertical-align: top;
+  }
+
+  #imprintmt {
+    display: none;
+  }
+}
