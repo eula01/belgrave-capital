@@ -9,6 +9,12 @@ npm install
 npm run dev
 ```
 
+If you see `Cannot find module './331.js'`, clear the build cache:
+
+```bash
+npm run dev:clean
+```
+
 The site is public. Use the top-right **client login** link for authorised access.
 
 Default login: `client` / `belgrave2026` (override via `BELGRAVE_USERNAME` and `BELGRAVE_PASSWORD`).

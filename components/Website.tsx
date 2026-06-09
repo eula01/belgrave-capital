@@ -3,11 +3,12 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 import ClientLogin from "@/components/ClientLogin";
 import Disclaimer from "@/components/Disclaimer";
+import MacroChart from "@/components/MacroChart";
 import memosData from "@/data/memos.json";
 
 type ContentBlock =
   | { type: "text"; text: string }
-  | { type: "image"; src: string; alt?: string };
+  | { type: "chart"; chartId: string };
 
 type Memo = {
   slug: string;
@@ -115,10 +116,10 @@ export default function Website() {
     return (
       <div className="project-view project-content">
         {activeMemo.content.map((block, i) => {
-          if (block.type === "image") {
+          if (block.type === "chart") {
             return (
-              <div key={i} className="image-view media-view">
-                <img src={block.src} alt={block.alt ?? ""} />
+              <div key={i} className="chart-view media-view">
+                {block.chartId === "macro-june-9" ? <MacroChart /> : null}
               </div>
             );
           }

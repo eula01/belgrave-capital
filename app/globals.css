@@ -102,8 +102,52 @@ a {
 }
 
 .image-view,
-.video-view {
+.video-view,
+.chart-view {
   line-height: 0;
+}
+
+.chart-view {
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+.macro-chart {
+  width: 100%;
+  font-family: "Suisse", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: lowercase;
+}
+
+.macro-chart-loading,
+.macro-chart-error {
+  font-size: 15px;
+  line-height: 1.2;
+  padding: 5px 0;
+}
+
+.macro-chart-svg .chart-title {
+  font-size: 13px;
+  fill: black;
+}
+
+.macro-chart-svg .chart-label,
+.macro-chart-svg .chart-value,
+.macro-chart-svg .chart-source {
+  font-size: 12px;
+  fill: black;
+}
+
+.macro-chart-svg .chart-bar {
+  fill: black;
+}
+
+.macro-chart-svg .chart-value {
+  text-anchor: end;
+}
+
+.macro-chart-svg .chart-source {
+  font-size: 10px;
+  opacity: 0.6;
 }
 
 .about-indicator {
