@@ -39,7 +39,7 @@ function LoginForm() {
 
   return (
     <form className="login-form" onSubmit={handleSubmit}>
-      <h1>Belgrave Capital LTD — Client Login</h1>
+      <h1>Belgrave Capital — Client Login</h1>
       <label>
         User
         <input name="username" type="text" autoComplete="username" required />

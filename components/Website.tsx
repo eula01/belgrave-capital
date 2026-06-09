@@ -59,14 +59,15 @@ export default function Website() {
 
   const renderListItem = (memo: Memo, index: number) => {
     const isActive = memo.slug === activeSlug;
-    const showDate = index === 0 || memo.date !== memos[index - 1]?.date;
+    const showDate =
+      !memo.isAbout && (index === 0 || memo.date !== memos[index - 1]?.date);
     const dateClass = showDate ? "year first-year" : "year hide_year";
 
     return (
       <div
         key={memo.slug}
         id={memo.isAbout ? "about-list-item" : undefined}
-        className={`list-item${isActive ? " active" : ""}`}
+        className={`list-item${isActive ? " active" : ""}${memo.isAbout ? " list-item-about" : ""}`}
       >
         <a
           href="#"
@@ -75,7 +76,9 @@ export default function Website() {
             selectMemo(memo.slug);
           }}
         >
-          <span className={dateClass}>{memo.date || " "}</span>
+          {!memo.isAbout ? (
+            <span className={dateClass}>{memo.date}</span>
+          ) : null}
           <span className="title">{memo.title}</span>
           <span className="category">{memo.tags.join(", ")}</span>
         </a>
@@ -161,7 +164,7 @@ export default function Website() {
         {isMobile && (
           <>
             <div className="mobile-bar" onClick={toggleList}>
-              <span>Belgrave Capital LTD</span>
+              <span className="mobile-bar-brand">Belgrave Capital</span>
               <span className="mobile-bar-login" onClick={(e) => e.stopPropagation()}>
                 <ClientLogin className="client-login-link mobile-client-login" />
               </span>

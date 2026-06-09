@@ -72,6 +72,10 @@ a {
   white-space: nowrap;
 }
 
+.list-item-about .title {
+  margin-left: 0;
+}
+
 .project-content {
   padding-top: 0;
 }
@@ -398,6 +402,7 @@ a {
     display: inline-block;
     text-align: left;
     width: 78px;
+    margin-right: 16px;
   }
 
   #list a:hover {
@@ -481,7 +486,7 @@ a {
     position: fixed;
     top: 31px;
     z-index: 5;
-    padding: 5px;
+    padding: 5px 5px 5px 0;
     width: 100%;
     box-sizing: border-box;
   }
@@ -501,11 +506,15 @@ a {
     justify-content: space-between;
     height: 29px;
     line-height: 29px;
-    padding-left: 5px;
+    padding-left: 0;
     padding-right: 30px;
     box-sizing: border-box;
     z-index: 1;
     background: white;
+  }
+
+  .mobile-bar-brand {
+    padding-left: 0;
   }
 
   #clientloginmt {
@@ -576,6 +585,7 @@ a {
     display: inline-block;
     text-align: left;
     width: 83px;
+    margin-right: 12px;
     vertical-align: top;
   }
 
@@ -588,7 +598,7 @@ a {
 
   .title {
     display: inline-block;
-    width: calc(100vw - 105px - 110px);
+    width: calc(100vw - 105px - 122px);
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;

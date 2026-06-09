@@ -79,9 +79,8 @@ export default function MacroChart() {
     if (!snapshot || !containerRef.current) return;
 
     const width = containerRef.current.clientWidth || 420;
-    const fedHeight = 28 + snapshot.fedJune.length * 18;
-    const cpiHeight = 28 + snapshot.coreCpiMay.length * 18;
-    const totalHeight = fedHeight + cpiHeight + 36;
+    const chartHeight = 28 + snapshot.coreCpiMay.length * 18;
+    const totalHeight = chartHeight + 20;
 
     d3.select(containerRef.current).selectAll("svg").remove();
 
@@ -93,20 +92,12 @@ export default function MacroChart() {
       .attr("viewBox", `0 0 ${width} ${totalHeight}`)
       .attr("class", "macro-chart-svg");
 
-    const fedBlock = drawBars(
-      svg,
-      "Fed Decision — June 17 (Polymarket Implied)",
-      snapshot.fedJune,
-      width,
-      0
-    );
-
     drawBars(
       svg,
-      "Core CPI YoY — May 2026 (Polymarket Implied)",
+      "Core CPI YoY — May 2026 (Polymarket)",
       snapshot.coreCpiMay,
       width,
-      fedBlock + 16
+      0
     );
 
     svg
