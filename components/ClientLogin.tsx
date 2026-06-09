@@ -28,14 +28,14 @@ export default function ClientLogin({ className = "client-login-link" }: { class
   if (authenticated) {
     return (
       <button type="button" className={className} onClick={handleLogout}>
-        logout
+        Logout
       </button>
     );
   }
 
   return (
     <Link href="/login" className={className}>
-      client login
+      Client Login
     </Link>
   );
 }

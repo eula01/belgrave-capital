@@ -17,7 +17,6 @@
 body {
   margin: 0;
   font-family: "Suisse", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  text-transform: lowercase;
 }
 
 #about-list-item {
@@ -53,7 +52,8 @@ a {
 }
 
 #about,
-#list {
+#list,
+#media {
   padding: 5px;
   box-sizing: border-box;
 }
@@ -73,7 +73,11 @@ a {
 }
 
 .project-content {
-  padding-top: 1px;
+  padding-top: 0;
+}
+
+.project-view {
+  padding-bottom: 24px;
 }
 
 .mobile-active-project {
@@ -108,14 +112,13 @@ a {
 }
 
 .chart-view {
-  padding: 5px;
+  padding: 0 0 12px;
   box-sizing: border-box;
 }
 
 .macro-chart {
   width: 100%;
   font-family: "Suisse", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  text-transform: lowercase;
 }
 
 .macro-chart-loading,
@@ -154,13 +157,33 @@ a {
   float: right;
 }
 
-.project-view:not(#about) .text-view {
-  margin-bottom: 0px;
-  margin-top: 2px;
+.text-view {
+  margin: 0;
 }
 
-.project-view:not(#about) .text-view p:last-child {
+.text-view p {
+  margin-top: 0;
+}
+
+.memo-action {
+  color: #c41e1e;
+  font-weight: 700;
+  margin-top: 20px;
+}
+
+.memo-action p {
+  color: inherit;
+  font-weight: inherit;
+  margin-bottom: 12px;
+}
+
+.memo-action p:last-child {
   margin-bottom: 0;
+}
+
+.disclaimer-block {
+  margin-top: 24px;
+  padding-top: 16px;
 }
 
 .year.first-year {
@@ -212,7 +235,6 @@ a {
   border-right: none;
   font-family: inherit;
   font-size: 10px;
-  text-transform: lowercase;
   cursor: pointer;
   padding: 0;
 }
@@ -261,7 +283,6 @@ a {
   padding: 4px 0;
   font-family: inherit;
   font-size: 15px;
-  text-transform: lowercase;
   background: transparent;
   outline: none;
   box-sizing: border-box;
@@ -273,7 +294,6 @@ a {
   background: none;
   font-family: inherit;
   font-size: 15px;
-  text-transform: lowercase;
   cursor: pointer;
   padding: 0;
   border-bottom: 1px solid transparent;
@@ -390,7 +410,12 @@ a {
 
   .text-view p {
     line-height: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
+  }
+
+  .text-view p:last-child,
+  .memo-action p:last-child {
+    margin-bottom: 0;
   }
 
   #imprintmt,
@@ -439,10 +464,13 @@ a {
     margin-bottom: 0;
   }
 
+  .project-view {
+    padding-top: 38px;
+  }
+
   .text-view {
-    margin-bottom: 0px;
-    margin-top: 2px;
-    padding-left: 5px;
+    margin: 0;
+    padding: 0;
   }
 
   #about-list-item {

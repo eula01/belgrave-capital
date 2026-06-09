@@ -95,7 +95,7 @@ export default function MacroChart() {
 
     const fedBlock = drawBars(
       svg,
-      "fed decision — june 17 (polymarket implied)",
+      "Fed Decision — June 17 (Polymarket Implied)",
       snapshot.fedJune,
       width,
       0
@@ -103,7 +103,7 @@ export default function MacroChart() {
 
     drawBars(
       svg,
-      "core cpi yoy — may 2026 (polymarket implied)",
+      "Core CPI YoY — May 2026 (Polymarket Implied)",
       snapshot.coreCpiMay,
       width,
       fedBlock + 16
@@ -115,7 +115,7 @@ export default function MacroChart() {
       .attr("y", totalHeight - 4)
       .attr("class", "chart-source")
       .text(
-        `source: polymarket · ${new Date(snapshot.fetchedAt).toLocaleString("en-gb", {
+        `Source: Polymarket · ${new Date(snapshot.fetchedAt).toLocaleString("en-GB", {
           day: "2-digit",
           month: "2-digit",
           hour: "2-digit",
@@ -125,11 +125,11 @@ export default function MacroChart() {
   }, [snapshot]);
 
   if (error) {
-    return <div className="macro-chart macro-chart-error">polymarket data unavailable</div>;
+    return <div className="macro-chart macro-chart-error">Polymarket data unavailable</div>;
   }
 
   if (!snapshot) {
-    return <div className="macro-chart macro-chart-loading">loading polymarket data…</div>;
+    return <div className="macro-chart macro-chart-loading">Loading Polymarket data…</div>;
   }
 
   return <div ref={containerRef} className="macro-chart" />;

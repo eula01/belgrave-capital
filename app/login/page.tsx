@@ -27,7 +27,7 @@ function LoginForm() {
     });
 
     if (!res.ok) {
-      setError("invalid credentials");
+      setError("Invalid credentials");
       setLoading(false);
       return;
     }
@@ -39,13 +39,13 @@ function LoginForm() {
 
   return (
     <form className="login-form" onSubmit={handleSubmit}>
-      <h1>belgrave capital ltd — client login</h1>
+      <h1>Belgrave Capital LTD — Client Login</h1>
       <label>
-        user
+        User
         <input name="username" type="text" autoComplete="username" required />
       </label>
       <label>
-        pass
+        Pass
         <input
           name="password"
           type="password"
@@ -59,14 +59,14 @@ function LoginForm() {
           checked={rememberMe}
           onChange={(e) => setRememberMe(e.target.checked)}
         />
-        remember me
+        Remember me
       </label>
       <button type="submit" disabled={loading}>
-        {loading ? "..." : "enter"}
+        {loading ? "..." : "Enter"}
       </button>
       {error ? <p className="login-error">{error}</p> : null}
       <p className="login-back">
-        <a href="/">← back to site</a>
+        <a href="/">← Back to site</a>
       </p>
     </form>
   );

@@ -12,6 +12,15 @@ export type PolymarketSnapshot = {
 const FED_EVENT_SLUG = "fed-decision-in-june-825";
 const CPI_EVENT_SLUG = "core-cpi-yoy-may-2026";
 
+function titleCaseLabel(label: string): string {
+  return label
+    .replace("no change", "No Change")
+    .replace("25 bps cut", "25 bps Cut")
+    .replace("25 bps hike", "25 bps Hike")
+    .replace("50+ bps cut", "50+ bps Cut")
+    .replace("50+ bps hike", "50+ bps Hike");
+}
+
 function parsePrices(outcomesRaw: string, pricesRaw: string): number | null {
   try {
     const outcomes = JSON.parse(outcomesRaw) as string[];
@@ -27,11 +36,11 @@ function parsePrices(outcomesRaw: string, pricesRaw: string): number | null {
 const FALLBACK: PolymarketSnapshot = {
   fetchedAt: new Date().toISOString(),
   fedJune: [
-    { label: "no change", probability: 99.1 },
-    { label: "25 bps cut", probability: 0.5 },
-    { label: "25 bps hike", probability: 0.6 },
-    { label: "50+ bps cut", probability: 0.2 },
-    { label: "50+ bps hike", probability: 0.1 },
+    { label: "No Change", probability: 99.1 },
+    { label: "25 bps Cut", probability: 0.5 },
+    { label: "25 bps Hike", probability: 0.6 },
+    { label: "50+ bps Cut", probability: 0.2 },
+    { label: "50+ bps Hike", probability: 0.1 },
   ],
   coreCpiMay: [
     { label: "≤2.4%", probability: 1.5 },
@@ -73,7 +82,7 @@ export async function getPolymarketSnapshot(): Promise<PolymarketSnapshot> {
           .replace("50+ bps decrease", "50+ bps cut")
           .replace("50+ bps increase", "50+ bps hike");
         if (probability !== null && label) {
-          fedJune.push({ label, probability });
+          fedJune.push({ label: titleCaseLabel(label), probability });
         }
       }
       fedJune.sort((a, b) => b.probability - a.probability);
@@ -93,7 +102,7 @@ export async function getPolymarketSnapshot(): Promise<PolymarketSnapshot> {
       for (const label of bucketOrder) {
         const probability = byLabel.get(label);
         if (probability !== undefined) {
-          coreCpiMay.push({ label: label.toLowerCase(), probability });
+          coreCpiMay.push({ label, probability });
         }
       }
     }

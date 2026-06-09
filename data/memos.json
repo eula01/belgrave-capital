@@ -2,21 +2,21 @@
   {
     "slug": "about",
     "date": "",
-    "title": "belgrave capital ltd",
-    "tags": ["about"],
+    "title": "Belgrave Capital LTD",
+    "tags": ["About"],
     "isAbout": true,
     "content": [
       {
         "type": "text",
-        "text": "<p><a href=\"https://x.com/countshelly\" target=\"_blank\" rel=\"noopener\">@countshelly</a>, 15 stratton st, london w1j 8lq</p>\n<p>belgrave capital ltd is a london-based investment firm focused on public markets. we trade equities with a primary emphasis on options in semiconductors, alongside global macro positioning across rates, energy, and credit.</p>\n<p>our approach combines top-down macro framing with bottom-up sector conviction. positions are expressed through liquid instruments with defined risk parameters.</p>\n<p>client access to research notes is restricted. authorised investors may log in to view current memos.</p>"
+        "text": "<p><a href=\"https://x.com/countshelly\" target=\"_blank\" rel=\"noopener\">@countshelly</a>, 15 Stratton St, London W1J 8LQ</p>\n<p>Belgrave Capital LTD is a London-based investment firm focused on public markets. We trade equities with a focus on semiconductors.</p>"
       }
     ]
   },
   {
     "slug": "macro-note-june-9",
     "date": "09/06/2026",
-    "title": "macro note",
-    "tags": ["macro", "rates", "cpi"],
+    "title": "Macro Note",
+    "tags": ["Macro", "Rates", "CPI"],
     "content": [
       {
         "type": "chart",
@@ -24,7 +24,7 @@
       },
       {
         "type": "text",
-        "text": "<p>tuesday june 9th — london — belgrave management ltd</p>\n<p><strong>situation</strong></p>\n<p>markets have spent the better part of the cycle discounting an imminent federal reserve pivot. that regime is now under pressure as sticky inflation, firmer oil, and deteriorating year-over-year cpi base effects force a repricing away from cuts and toward a non-trivial hike risk scenario.</p>\n<p>polymarket currently prices the june 17 fomc decision at ~99% no change, with a 25 bps hike at ~0.6% and a 25 bps cut at ~0.5%. core cpi yoy for may 2026 is centred on 2.8% (~52% implied) and 2.9% (~32% implied) — a hotter tail (≥3.3%) still carries ~3% probability.</p>\n<p>u.s. cpi — the bureau of labor statistics' monthly measure of price changes paid by urban consumers — is released at 8:30 a.m. et on a fixed schedule. the next release, covering may 2026, is scheduled for june 10, 2026.</p>\n<p><strong>complication</strong></p>\n<p>equity and credit markets tend to react less to the absolute cpi print than to the surprise versus consensus, because that surprise changes the expected path of policy rates and discount rates. a hotter-than-expected inflation print typically pushes yields higher, weighs on equity valuations, and is especially punitive for long-duration growth and weaker balance sheets.</p>\n<p>higher rates also tighten financial conditions by raising interest expense and refinancing costs, which matters most for highly levered borrowers and speculative-grade credit. in a regime where oil remains firm, inflation and rates can act as a simultaneous tax on growth, compressing both margins and valuation multiples. if inflation remains above expectation, front-end yields should stay elevated, duration should remain vulnerable, and lower-quality credits should face rising refinancing stress as capital becomes more selective.</p>\n<p><strong>action</strong></p>\n<p>stay short duration, avoid structurally weak credits, and maintain constructive exposure to energy and short-dated cash equivalents while the inflation path remains unresolved.</p>\n<p>long xle, long bil, tactically long tbt, and underweight or short lower-quality credit and long-duration growth into cpi-sensitive repricing windows.</p>"
+        "text": "<p>Tuesday June 9th — London — Belgrave Management LTD</p>\n<p>Markets have spent the better part of the cycle discounting an imminent Federal Reserve pivot. That regime is now under pressure as sticky inflation, firmer oil, and deteriorating year-over-year CPI base effects force a repricing away from cuts and toward a non-trivial hike risk scenario.</p>\n<p>Polymarket currently prices the June 17 FOMC decision at ~99% no change, with a 25 bps hike at ~0.6% and a 25 bps cut at ~0.5%. Core CPI YoY for May 2026 is centred on 2.8% (~52% implied) and 2.9% (~32% implied) — a hotter tail (≥3.3%) still carries ~3% probability.</p>\n<p>U.S. CPI — the Bureau of Labor Statistics' monthly measure of price changes paid by urban consumers — is released at 8:30 a.m. ET on a fixed schedule. The next release, covering May 2026, is scheduled for June 10, 2026.</p>\n<p>Equity and credit markets tend to react less to the absolute CPI print than to the surprise versus consensus, because that surprise changes the expected path of policy rates and discount rates. A hotter-than-expected inflation print typically pushes yields higher, weighs on equity valuations, and is especially punitive for long-duration growth and weaker balance sheets.</p>\n<p>Higher rates also tighten financial conditions by raising interest expense and refinancing costs, which matters most for highly levered borrowers and speculative-grade credit. In a regime where oil remains firm, inflation and rates can act as a simultaneous tax on growth, compressing both margins and valuation multiples. If inflation remains above expectation, front-end yields should stay elevated, duration should remain vulnerable, and lower-quality credits should face rising refinancing stress as capital becomes more selective.</p>\n<div class=\"memo-action\"><p>Stay short duration, avoid structurally weak credits, and maintain constructive exposure to energy and short-dated cash equivalents while the inflation path remains unresolved.</p>\n<p>Long XLE, long BIL, tactically long TBT, and underweight or short lower-quality credit and long-duration growth into CPI-sensitive repricing windows.</p></div>"
       }
     ]
   }

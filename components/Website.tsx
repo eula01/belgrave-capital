@@ -106,7 +106,7 @@ export default function Website() {
               />
             ) : null
           )}
-          <div className="text-view">
+          <div className="text-view disclaimer-block">
             <Disclaimer />
           </div>
         </div>
@@ -131,7 +131,7 @@ export default function Website() {
             />
           );
         })}
-        <div className="text-view">
+        <div className="text-view disclaimer-block">
           <Disclaimer />
         </div>
       </div>
@@ -148,20 +148,20 @@ export default function Website() {
           setShowList(false);
         }}
       >
-        <div id="disclaimermt">disclaimer</div>
+        <div id="disclaimermt">Disclaimer</div>
       </a>
       <div id="clientloginmt">
         <ClientLogin />
       </div>
       <a href="#" onClick={(e) => { e.preventDefault(); selectMemo("about"); }}>
-        <div id="imprintmt">about</div>
+        <div id="imprintmt">About</div>
       </a>
 
       <div className="website-view">
         {isMobile && (
           <>
             <div className="mobile-bar" onClick={toggleList}>
-              <span>belgrave capital ltd</span>
+              <span>Belgrave Capital LTD</span>
               <span className="mobile-bar-login" onClick={(e) => e.stopPropagation()}>
                 <ClientLogin className="client-login-link mobile-client-login" />
               </span>
@@ -171,7 +171,7 @@ export default function Website() {
             </div>
             <div className="mobile-active-project" onClick={toggleList}>
               {showDisclaimer ? (
-                <span className="title">disclaimer</span>
+                <span className="title">Disclaimer</span>
               ) : (
                 <>
                   <span className="year first-year">{activeMemo.date}</span>
