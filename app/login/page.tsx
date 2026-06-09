@@ -2,6 +2,7 @@
 
 import { FormEvent, Suspense, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
+import Disclaimer from "@/components/Disclaimer";
 
 function LoginForm() {
   const router = useRouter();
@@ -62,9 +63,12 @@ function LoginForm() {
 export default function LoginPage() {
   return (
     <div className="login-page">
-      <Suspense>
-        <LoginForm />
-      </Suspense>
+      <div>
+        <Suspense>
+          <LoginForm />
+        </Suspense>
+        <Disclaimer className="disclaimer login-disclaimer" />
+      </div>
     </div>
   );
 }

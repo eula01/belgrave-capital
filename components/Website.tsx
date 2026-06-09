@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useMemo, useState } from "react";
+import Disclaimer from "@/components/Disclaimer";
 import memosData from "@/data/memos.json";
 
 type ContentBlock =
@@ -23,6 +24,7 @@ export default function Website() {
   const [activeSlug, setActiveSlug] = useState(
     memos.find((m) => !m.isAbout)?.slug ?? memos[0].slug
   );
+  const [showDisclaimer, setShowDisclaimer] = useState(false);
   const [showList, setShowList] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
@@ -45,6 +47,7 @@ export default function Website() {
 
   const selectMemo = useCallback((slug: string) => {
     setActiveSlug(slug);
+    setShowDisclaimer(false);
     setShowList(false);
   }, []);
 
@@ -79,6 +82,16 @@ export default function Website() {
   };
 
   const renderContent = () => {
+    if (showDisclaimer) {
+      return (
+        <div id="disclaimer" className="project-view">
+          <div className="text-view">
+            <Disclaimer />
+          </div>
+        </div>
+      );
+    }
+
     if (activeMemo.isAbout) {
       return (
         <div id="about" className="project-view">
@@ -91,6 +104,9 @@ export default function Website() {
               />
             ) : null
           )}
+          <div className="text-view">
+            <Disclaimer />
+          </div>
         </div>
       );
     }
@@ -113,12 +129,25 @@ export default function Website() {
             />
           );
         })}
+        <div className="text-view">
+          <Disclaimer />
+        </div>
       </div>
     );
   };
 
   return (
     <>
+      <a
+        href="#"
+        onClick={(e) => {
+          e.preventDefault();
+          setShowDisclaimer(true);
+          setShowList(false);
+        }}
+      >
+        <div id="disclaimermt">disclaimer</div>
+      </a>
       <a href="#" onClick={(e) => { e.preventDefault(); selectMemo("about"); }}>
         <div id="imprintmt">about</div>
       </a>
@@ -133,9 +162,15 @@ export default function Website() {
               <div className="mobile-icon" />
             </div>
             <div className="mobile-active-project" onClick={toggleList}>
-              <span className="year first-year">{activeMemo.date}</span>
-              <span className="title">{activeMemo.title}</span>
-              <span className="category">{activeMemo.tags.join(", ")}</span>
+              {showDisclaimer ? (
+                <span className="title">disclaimer</span>
+              ) : (
+                <>
+                  <span className="year first-year">{activeMemo.date}</span>
+                  <span className="title">{activeMemo.title}</span>
+                  <span className="category">{activeMemo.tags.join(", ")}</span>
+                </>
+              )}
             </div>
           </>
         )}
