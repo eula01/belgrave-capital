@@ -169,6 +169,11 @@ a {
   margin-top: 0;
 }
 
+.memo-intro {
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
 .memo-action {
   color: #c41e1e;
   font-weight: 700;
